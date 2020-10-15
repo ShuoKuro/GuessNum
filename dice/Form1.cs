@@ -12,7 +12,7 @@ namespace dice
 {
     public partial class Form1 : Form
     {
-        int GuessNum = new Random().Next(100);
+        private int GuessNum = new Random().Next(100);
         public Form1()
         {
             InitializeComponent();
