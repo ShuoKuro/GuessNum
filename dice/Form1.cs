@@ -12,15 +12,16 @@ namespace dice
 {
     public partial class Form1 : Form
     {
-        private int GuessNum = new Random().Next(100);
+        //private int GuessNum = new Random().Next(100);
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
+
+            /*
             try
             {
                 int randomNum = new Random().Next(5) + 1;
@@ -48,6 +49,7 @@ namespace dice
 
                 string caption = "TEST";
                 DialogResult result;
+
                 result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
 
                 if (result == System.Windows.Forms.DialogResult.No)
@@ -56,9 +58,10 @@ namespace dice
                 }
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
-                    messagebox();
+                    //messagebox();
                 }
-            }
+            } 
+            */
 
         }
         void messagebox()
@@ -76,6 +79,16 @@ namespace dice
             {
                 this.Close();
             }
+        }
+
+        private void Rtb_show_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_text_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
