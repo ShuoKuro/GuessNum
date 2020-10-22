@@ -88,7 +88,9 @@ namespace dice
 
         private void Btn_text_Click(object sender, EventArgs e)
         {
-            List<int> poker = GetPoker(52);
+            Poker p =new Poker();
+
+            List<int> poker = p.GetPoker(52);
 
             string msg = "";
 
@@ -98,34 +100,6 @@ namespace dice
             }
             rtb_show.Text = msg + "\n";
         }
-        public List<int> GetPoker(int count)
-        {
-            List<int> result = new List<int>();
 
-            try
-            {
-                for (int i = 0; i < count; i++)
-                {
-                    result.Add(i);
-                }
-
-                for (int i = count - 2; i >= 0; i--)
-                {
-                    int lastindex = i + 1;
-                    int randomIndex = (new Random()).Next(i);
-
-                    int temp = result[lastindex];
-                    result[lastindex] = result[randomIndex];
-                    result[randomIndex] = temp;
-                }
-            }
-            catch (Exception exp)
-            {
-                Console.WriteLine(exp.ToString());
-                throw;
-            }
-
-            return result;
-        }
     }
 }
