@@ -88,7 +88,15 @@ namespace dice
 
         private void Btn_text_Click(object sender, EventArgs e)
         {
+            List<int> poker = GetPoker(52);
 
+            string msg = "";
+
+            for(int i=0;i<poker.Count;i++)
+            {
+                msg += $"{poker[i]},";
+            }
+            rtb_show.Text = msg + "\n";
         }
         public List<int> GetPoker(int count)
         {
